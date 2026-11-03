@@ -5,6 +5,7 @@ test-results/
 tests/
 test/
 scripts/
+entrega/
 .env
 .env.*
 !.env.example

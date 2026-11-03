@@ -4,7 +4,15 @@
 
 **Repositorio:** https://github.com/Brandonaguicede/lab6pa
 
-**Despliegue en Vercel:** pendiente de configurar para este repositorio.
+**Despliegue en Vercel:** https://lab6pa.vercel.app
+
+## Evidencias del Laboratorio 5
+
+La carpeta `entrega/` contiene las capturas JPG, `repositorio.txt`, el PDF de apoyo y los registros originales. Se verificaron 31 pruebas unitarias, 20 de integración y 4 end-to-end aprobadas. La evidencia de inyección corresponde a la versión corregida, con sesión local de prueba; no acredita el acceso real con Auth0 en producción.
+
+Snyk con `--dev` detectó una vulnerabilidad alta en picomatch y dos medias. La alta no tiene versión corregida disponible según el aviso SNYK-JS-PICOMATCH-21248802 consultado; el requisito de reparar todas las altas sigue pendiente. No se ignoraron hallazgos.
+
+Para regenerar las evidencias, inicie el servidor de pruebas con `node tests/helpers/e2e-server.js` y ejecute en otra terminal `node scripts/create-lab5-delivery.js`. El escaneo Snyk requiere autenticación y su salida se conserva en `entrega/logs/snyk.txt`.
 
 Chat de Express y Socket.IO con validación segura de mensajes y autenticación social mediante Auth0. El acceso a `/chat`, `/api/me` y la conexión Socket.IO requiere una sesión válida. El nombre mostrado en cada mensaje proviene de la identidad verificada, no del navegador.
 

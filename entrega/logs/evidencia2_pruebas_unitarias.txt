@@ -1,0 +1,54 @@
+
+
+  unalib
+    funcion is_valid_phone
+      √ deberia devolver true para 8297-8547
+      √ deberia devolver false para 8297p-8547
+    funcion is_valid_url_image
+      √ deberia devolver true para http://image.com/image.jpg
+      √ deberia devolver true para http://image.com/image.gif
+    funcion is_valid_yt_video
+      √ deberia devolver true para https://www.youtube.com/watch?v=qYwlqx-JLok
+    validacion de URLs de imagenes
+      √ acepta la extension .jpg
+      √ acepta la extension .jpeg
+      √ acepta la extension .gif
+      √ acepta la extension .png
+      √ acepta la extension .bmp
+      √ acepta la extension .webp
+      √ acepta query string
+      √ rechaza una URL que no es imagen
+      √ rechaza esquemas peligrosos (javascript:, data:)
+      √ rechaza URLs que intentan salirse del atributo src
+Es una imagen!
+      √ validateMessage convierte una URL de imagen en una etiqueta <img>
+    validacion de URLs de videos
+      √ acepta youtube.com/watch?v=
+      √ acepta youtu.be/
+      √ rechaza un id de YouTube invalido
+      √ rechaza otro dominio con apariencia de YouTube
+      √ acepta videos directos mp4 y webm
+      √ rechaza una URL que no es video
+Es un video!
+      √ validateMessage inserta un reproductor iframe para YouTube
+Es un video!
+      √ validateMessage inserta un reproductor <video> para mp4
+    prevencion de inyeccion de scripts
+Es un texto!
+      √ escapa <script> en el mensaje
+Es un texto!
+      √ escapa etiquetas con manejadores de eventos
+Es un texto!
+      √ escapa HTML en el nombre de usuario
+Es un texto!
+      √ reemplaza un color malicioso por uno seguro
+Es un texto!
+      √ un mensaje con texto mas una URL no se interpreta como HTML
+      √ un JSON invalido se devuelve escapado
+      √ un mensaje vacio o no string no rompe la validacion
+
+
+  31 passing (15ms)
+
+
+Exit code: 0

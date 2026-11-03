@@ -1,0 +1,8 @@
+{
+  "payload": "<script>alert('Inyección de script');</script>",
+  "dialogs": [],
+  "scriptElements": 0,
+  "message": "Tester: <script>alert('Inyección de script');</script>",
+  "version": "versión corregida actual",
+  "identity": "Tester (sesión de prueba)"
+}

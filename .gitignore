@@ -5,3 +5,8 @@ test-results/
 .env.*
 !.env.example
 .vercel/
+entrega/preview/
+entrega/*.zip
+
+.vercel
+.env*

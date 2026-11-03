@@ -1,0 +1,57 @@
+  console.log
+    Es una imagen!
+
+      at Object.log [as validateMessage] (libs/unalib.js:134:19)
+
+  console.log
+    Es un video!
+
+      at Object.log [as validateMessage] (libs/unalib.js:142:19)
+
+  console.log
+    Es un video!
+
+      at Object.log [as validateMessage] (libs/unalib.js:138:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+  console.log
+    Es un texto!
+
+      at Object.log [as validateMessage] (libs/unalib.js:146:19)
+
+Test Suites: 3 passed, 3 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        3.075 s
+Ran all test suites matching tests/integration.
+
+Exit code: 0
