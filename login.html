@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | UNA Chat</title>
+  <meta name="description" content="Inicia sesión para entrar al chat privado de la comunidad UNA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --blue: #1455d9;
+      --blue-dark: #102f67;
+      --ink: #17324f;
+      --muted: #4e6480;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 1.5rem;
+      color: var(--ink);
+      background: #123a80;
+      font: 16px 'Outfit', system-ui, sans-serif;
+    }
+    main {
+      position: relative;
+      width: min(440px, 100%);
+      padding: clamp(2rem, 7vw, 3rem);
+      overflow: hidden;
+      text-align: left;
+      background: #f8fbff;
+      border: 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 28px 80px #020e1e66, inset 0 1px #fff;
+    }
+
+    h1 { margin: 0 0 .7rem; color: var(--blue-dark); font-size: clamp(2.4rem, 10vw, 3rem); font-weight: 700; letter-spacing: -.03em; line-height: 1; }
+    p { max-width: 34ch; color: var(--muted); line-height: 1.65; margin: .5rem 0; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.1rem;
+      margin-top: 1.4rem;
+      padding: .8rem 1.25rem;
+      color: white;
+      background: var(--blue);
+      border-radius: .8rem;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 7px 17px #1d5eb53d;
+      transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    a:hover { background: #1b53a8; transform: translateY(-2px); box-shadow: 0 11px 22px #1d5eb54d; }
+    a:active { transform: translateY(1px); }
+    a:focus-visible { outline: 3px solid #86baff; outline-offset: 4px; }
+    #notice { min-height: 1.5rem; color: #a53d4b; font-weight: 500; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+    ::selection { background: #bcd4ff; color: #102f67; }
+    html { scrollbar-color: #7c9bc8 #e8f1ff; }
+    input { caret-color: var(--blue); }
+    input::placeholder { color: #526784; opacity: 1; }    body { background: #123a80; }
+    main { border: 0; border-radius: 16px; box-shadow: 0 24px 64px #00000033; }
+
+    a { width: 100%; }
+    #notice:empty { display: none; }
+    #notice:not(:empty) { margin-top: 1.25rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>UNA Chat</h1>
+    <p>Inicie sesión con su cuenta social para acceder al chat.</p>
+    <p id="notice" role="alert"></p>
+    <a href="/login">Iniciar sesión</a>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const notice = document.getElementById('notice');
+    if (params.get('auth_error') === 'cancelled') notice.textContent = 'Se canceló el inicio de sesión. Puede intentarlo de nuevo.';
+    else if (params.has('auth_error')) notice.textContent = 'No se pudo iniciar sesión. Inténtelo de nuevo.';
+    else if (params.has('login_required')) notice.textContent = 'Debe iniciar sesión para entrar al chat.';
+  </script>
+</body>
+</html>
